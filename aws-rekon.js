@@ -3,7 +3,8 @@
 require('dotenv').config();
 const AWS = require('aws-sdk')
 const bucket = process.env.BUCKET // the bucketname without s3://
-const photo  = 'contacts.jpg' // the name of file
+const photo  = 'DSCN0821.JPG' // the name of file
+const photo2 = 'DSCN0747.JPG'
 //const config = new 
 AWS.config.update({
   accessKeyId: process.env.AWS_ACCESS_KEY,
@@ -35,7 +36,7 @@ var params = {
   //  Bytes: Buffer.from('...') || 'STRING_VALUE' /* Strings will be Base-64 encoded on your behalf */,
     S3Object: {
       Bucket: bucket,
-      Name: photo,
+      Name: photo2,
   //    Version: 'STRING_VALUE'
     }
   },

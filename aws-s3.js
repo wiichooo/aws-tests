@@ -7,14 +7,14 @@ const s3 = new AWS.S3({
     secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
 });
 
-const fileName = 'DSCN0747.JPG';
-const fileName2 = 'DSCN0821.JPG';
+const fileName = '1.jpg';
+const fileName2 = '2.jpg';
 const uploadFile = () => {
   fs.readFile(fileName, (err, data) => {
      if (err) throw err;
      const params = {
          Bucket: process.env.BUCKET, // pass your bucket name
-         Key: 'DSCN0747.JPG', // file will be saved as testBucket/contacts.csv
+         Key: '1.jpg', // file will be saved as testBucket/contacts.csv
          Body: JSON.stringify(data, null, 2)
      };
      s3.upload(params, function(s3Err, data) {
@@ -26,7 +26,7 @@ const uploadFile = () => {
 //     if (err) throw err;
 //     const params = {
 //         Bucket: process.env.BUCKET, // pass your bucket name
-//         Key: 'DSCN0821.JPG', // file will be saved as testBucket/contacts.csv
+//         Key: '2.jpg', // file will be saved as testBucket/contacts.csv
 //         Body: JSON.stringify(data, null, 2)
 //     };
 //     s3.upload(params, function(s3Err, data) {

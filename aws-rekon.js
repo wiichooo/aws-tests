@@ -3,8 +3,8 @@
 require('dotenv').config();
 const AWS = require('aws-sdk')
 const bucket = process.env.BUCKET // the bucketname without s3://
-const photo  = 'DSCN0821.JPG' // the name of file
-const photo2 = 'DSCN0747.JPG'
+const photo  = '1.jpg' // the name of file
+const photo2 = '2.jpg'
 //const config = new 
 AWS.config.update({
   accessKeyId: process.env.AWS_ACCESS_KEY,

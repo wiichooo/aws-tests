@@ -1,5 +1,7 @@
-###AWS test
+### AWS test
 
-#S3
+# S3
+Upload files to S3.
 
-#Rekognition
+# Rekognition
+Compare faces in one picture to the ones in other picture.
